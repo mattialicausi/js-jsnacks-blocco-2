@@ -32,26 +32,34 @@ let risultato1 = document.getElementById('risultato1');
 //da queste vuole generare una falsa lista di invitati con nome e cognome.
 
 
-// const btnLista = document.getElementById('btn-lista');
-// btnLista.addEventListener('click', evento2);
+const btnLista = document.getElementById('btn-lista');
+btnLista.addEventListener('click', evento2);
 
-// function evento2(){
-//     let nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
-//     let cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
-//     let invitati = [];
+let contenutoLista = document.getElementById('contenutoLista');
 
-//     let trovato = false;
+function evento2(){
+    let nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
+    let cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
+    let invitati = [];
 
-//     for (let n = 0; n <= nomi.length; n++){
-//     console.log([n]); 
-//      if(){
+   for(let n = 0; n <= nomi.length; n++){
+    let randomN = Math.floor(Math.random() * nomi.length);
+    // console.log(nomi);
+  
 
-//      }
-    
-       
-//     }
-    
-// }
+        for(let c = 0; c <= nomi.length; c++){
+        let randomC = Math.floor(Math.random() * cognomi.length);
+        // console.log(cognomi);
+        
+
+        for(let s = 0; s < 6; s++){
+            contenutoLista.innerHTML = randomN + randomC;
+            console.log(contenutoLista.innerHTML);
+
+        }
+        }
+      }
+}
 
 
 // **Snack3**
