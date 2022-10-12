@@ -39,24 +39,22 @@ let contenutoLista = document.getElementById('contenutoLista');
 
 function evento2(){
     let nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
-    console.log(nomi)
+    console.log(nomi);
     let cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
-    console.log(cognomi)
+    console.log(cognomi);
     let invitati = [];
 
    for(let n = 0; n <= 5; n++){
     
     let randomN = Math.floor(Math.random() * nomi.length);
-    console.log(randomN);
-   
     let randomC = Math.floor(Math.random() * cognomi.length);
-    // randomN = String(randomN);
-    // randomC = String(randomC);
-    console.log(randomN);
+    console.log(randomN, randomC);
 
+    let valore1 =  nomi[n];
+    let valore2 = cognomi[n];
 
-    contenutoLista.innerHTML = randomN + randomC;
-    // console.log(contenutoLista);
+    contenutoLista.innerHTML = valore1 + valore2;
+
      }
 }
 
