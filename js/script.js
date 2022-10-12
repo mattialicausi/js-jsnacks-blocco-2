@@ -38,22 +38,27 @@ btnLista.addEventListener('click', evento2);
 let contenutoLista = document.getElementById('contenutoLista');
 
 function evento2(){
-    let nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
-    console.log(nomi);
-    let cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
-    console.log(cognomi);
-    let invitati = [];
+    const nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
+    // console.log(nomi);
+    const cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
+    // console.log(cognomi);
+
+    let listaInvitati = [];
 
    for(let n = 0; n <= 5; n++){
-    
-    let randomN = Math.floor(Math.random() * nomi.length);
-    let randomC = Math.floor(Math.random() * cognomi.length);
-    console.log(randomN, randomC);
 
-    let valore1 =  nomi[n];
-    let valore2 = cognomi[n];
+    let nR = Math.floor(Math.random() * nomi.length);
+    let cR = Math.floor(Math.random() * cognomi.length);
+    // console.log(nR, cR);
 
-    contenutoLista.innerHTML = valore1 + valore2;
+    let valore1 =  nomi[nR];
+    let valore2 = cognomi[cR];
+    // console.log(valore1, valore2);
+
+    listaInvitati.push(valore1 + ' ' + valore2 + '<br>');
+    // console.log(listaInvitati);
+
+    contenutoLista.innerHTML = listaInvitati;
 
      }
 }
