@@ -95,3 +95,47 @@ function evento3(){
     console.log(contenitoreSomma.innerHTML);
 
 }
+
+
+// **Snack4 (Bonus)**
+// Crea due array che hanno un numero di elementi diversi.  
+//Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
+
+
+const bottone4 = document.getElementById('btn4');
+bottone4.addEventListener('click', evento4);
+
+
+function evento4(){
+
+    const contenitoreBefore = document.getElementById('containerBefore');
+    const contenitoreAfter = document.getElementById('containerAfter');
+
+    let listaUno = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    let listaDue = [13, 14, 15, 16, 17, 18];
+
+    let nListaUno = listaUno.length;
+    let nListaDue = listaDue.length;
+
+    contenitoreBefore.innerHTML = listaUno + '<br>' + listaDue;
+
+
+    for (let l = 0; l < 6; l++);{
+
+       if(nListaUno > nListaDue){
+        listaDue.push(listaUno[0]);
+        listaDue.push(listaUno[1]);
+        listaDue.push(listaUno[2]);
+
+        listaUno.shift([10]);
+        listaUno.shift([9]);
+        listaUno.shift([8]);
+    
+       }
+       console.log(listaUno, listaDue);
+       contenitoreAfter.innerHTML = listaUno + '<br>' + listaDue;
+
+    }
+
+
+}
