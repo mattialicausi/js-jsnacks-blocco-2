@@ -39,26 +39,25 @@ let contenutoLista = document.getElementById('contenutoLista');
 
 function evento2(){
     let nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
+    console.log(nomi)
     let cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
+    console.log(cognomi)
     let invitati = [];
 
-   for(let n = 0; n <= nomi.length; n++){
+   for(let n = 0; n <= 5; n++){
+    
     let randomN = Math.floor(Math.random() * nomi.length);
-    // console.log(nomi);
-  
+    console.log(randomN);
+   
+    let randomC = Math.floor(Math.random() * cognomi.length);
+    // randomN = String(randomN);
+    // randomC = String(randomC);
+    console.log(randomN);
 
-        for(let c = 0; c <= nomi.length; c++){
-        let randomC = Math.floor(Math.random() * cognomi.length);
-        // console.log(cognomi);
-        
 
-        for(let s = 0; s < 6; s++){
-            contenutoLista.innerHTML = randomN + randomC;
-            console.log(contenutoLista.innerHTML);
-
-        }
-        }
-      }
+    contenutoLista.innerHTML = randomN + randomC;
+    // console.log(contenutoLista);
+     }
 }
 
 
