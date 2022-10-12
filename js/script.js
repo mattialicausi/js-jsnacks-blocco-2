@@ -25,3 +25,63 @@ let risultato1 = document.getElementById('risultato1');
         console.log(parseInt(numero1));
     }
 }
+
+// **Snack2**
+// Generatore di “nomi cognomi” casuali: 
+//il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e 
+//da queste vuole generare una falsa lista di invitati con nome e cognome.
+
+
+// const btnLista = document.getElementById('btn-lista');
+// btnLista.addEventListener('click', evento2);
+
+// function evento2(){
+//     let nomi = ["Mattia", "Giacomo", "Alessia", "Francesca", "Leonardo", "Cristina"];
+//     let cognomi = ["Rossi", "Di Caprio", "Esposito", "Roma", "Firenze", "Russo"];
+//     let invitati = [];
+
+//     let trovato = false;
+
+//     for (let n = 0; n <= nomi.length; n++){
+//     console.log([n]); 
+//      if(){
+
+//      }
+    
+       
+//     }
+    
+// }
+
+
+// **Snack3**
+// Crea un array di numeri interi e fai la somma di tutti gli elementi  
+//che sono in posizione dispari
+
+const btnSomma = document.getElementById('btn-somma');
+btnSomma.addEventListener('click', evento3);
+
+let numero1Utente = document.getElementById('numero1Utente');
+let numero2Utente = document.getElementById('numero2Utente');
+let numero3Utente = document.getElementById('numero3Utente');
+let numero4Utente = document.getElementById('numero4Utente');
+let numero5Utente = document.getElementById('numero5Utente');
+let numero6Utente = document.getElementById('numero6Utente');
+
+
+function evento3(){
+    let listaNumeri = [];
+
+    const contenitoreSomma = document.getElementById('contenitoreSomma');
+
+    listaNumeri[0] = numero1Utente.value;
+    listaNumeri[1] = numero2Utente.value;
+    listaNumeri[2] = numero3Utente.value;
+    listaNumeri[3] = numero4Utente.value;
+    listaNumeri[4] = numero5Utente.value;
+    listaNumeri[5] = numero6Utente.value;
+
+    contenitoreSomma.innerHTML = parseInt(listaNumeri[1]) + parseInt(listaNumeri[3]) + parseInt(listaNumeri[5]);
+    console.log(contenitoreSomma.innerHTML);
+
+}
